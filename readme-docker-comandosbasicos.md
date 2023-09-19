@@ -12,3 +12,9 @@ Utilizaremos la imagen de Ubuntu. Usa Visual Studio Code y Docker junto con esta
 6. Sal del terminal, ¿que ocurrió con el contenedor?
 7. ¿Cuanta memoria en el disco duro ocupaste?
 8. ¿Cuanta RAM ocupan los contenedores? ¿Hay algún comando docker para saber esto?.
+
+## Respuesta
+1. Descarga la imagen 'ubuntu y comprueba que está en tu equipo 
+
+        Comando:            $ docker run ubuntu
+        Para comprobar:     $ docker image ls
