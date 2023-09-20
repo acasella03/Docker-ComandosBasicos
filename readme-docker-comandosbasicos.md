@@ -14,7 +14,7 @@ Utilizaremos la imagen de Ubuntu. Usa Visual Studio Code y Docker junto con esta
 8. ¿Cuanta RAM ocupan los contenedores? ¿Hay algún comando docker para saber esto?.
 
 ## Respuesta
-1. Descarga la imagen 'ubuntu y comprueba que está en tu equipo 
+- [x] Descarga la imagen 'ubuntu y comprueba que está en tu equipo 
 
         Comando:            $ docker run ubuntu
 
@@ -24,14 +24,15 @@ Utilizaremos la imagen de Ubuntu. Usa Visual Studio Code y Docker junto con esta
 
         REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
         oraclelinux   9-slim    b88613e03d35   3 days ago     103MB
-        **ubuntu        latest    c6b84b685f35   4 weeks ago    77.8MB**
+        ubuntu        latest    c6b84b685f35   4 weeks ago    77.8MB
         bash          latest    3c04497fad88   6 weeks ago    13.9MB
         hello-world   latest    9c7a54a9a43c   4 months ago   13.3kB
 
-Como se puede observar en la línea marcada, se comprueba que existe la imágen
+> [!NOTE]
+> Como se puede observar en la línea 2, se comprueba que existe la imágen.
 
 
-2. Crea un contenedor sin ponerle nombre. ¿está arrancado? Obtén el nombre
+- [x] Crea un contenedor sin ponerle nombre. ¿está arrancado? Obtén el nombre
 
         Comando:        $ docker run -i -t  ubuntu:latest bash
 
@@ -45,3 +46,6 @@ Como se puede observar en la línea marcada, se comprueba que existe la imágen
 
          CONTAINER ID   IMAGE           COMMAND   CREATED           STATUS      PORTS       NAMES
          55c10eaa19d3   ubuntu:latest   "bash"    3 minutes ago     Up3minutes              flamboyant_napier
+
+> [!NOTE]
+> Como se puede observar, se comprueba que que el nombre es **flamboyant_napier**.
