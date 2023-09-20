@@ -56,4 +56,26 @@ Utilizaremos la imagen de Ubuntu. Usa Visual Studio Code y Docker junto con esta
 
         Para acceder:   $ docker exec -it dam_ubu1 bash
 
+- [x] Comprueba que ip tiene y si puedes hacer un ping a google.com
 
+        Comando:        apt update
+                        apt install net-tools
+                        ifconfig
+
+        Salida por consola:
+
+        eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.0.2  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:ac:11:00:02  txqueuelen 0  (Ethernet)
+        RX packets 22770  bytes 29046627 (29.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 11897  bytes 795269 (795.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+        lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
