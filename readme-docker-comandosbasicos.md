@@ -79,3 +79,30 @@ Utilizaremos la imagen de Ubuntu. Usa Visual Studio Code y Docker junto con esta
         RX errors 0  dropped 0  overruns 0  frame 0
         TX packets 0  bytes 0 (0.0 B)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+        Comando(ping):  apt install iputils -ping
+                        ping www.google.com
+        
+        Salida por consola:
+
+        64 bytes from mad07s10-in-f4.1e100.net (172.217.168.164): icmp_seq=1 ttl=110 time=15.4 ms
+        64 bytes from mad07s10-in-f4.1e100.net (172.217.168.164): icmp_seq=2 ttl=110 time=16.6 ms
+        64 bytes from mad07s10-in-f4.1e100.net (172.217.168.164): icmp_seq=3 ttl=110 time=15.9 ms
+        64 bytes from mad07s10-in-f4.1e100.net (172.217.168.164): icmp_seq=4 ttl=110 time=15.8 ms
+        64 bytes from mad07s10-in-f4.1e100.net (172.217.168.164): icmp_seq=5 ttl=110 time=15.0 ms
+        64 bytes from mad07s10-in-f4.1e100.net (172.217.168.164): icmp_seq=6 ttl=110 time=15.5 ms
+        64 bytes from mad07s10-in-f4.1e100.net (172.217.168.164): icmp_seq=7 ttl=110 time=15.7 ms
+        64 bytes from mad07s10-in-f4.1e100.net (172.217.168.164): icmp_seq=8 ttl=110 time=15.8 ms
+        64 bytes from mad07s10-in-f4.1e100.net (172.217.168.164): icmp_seq=9 ttl=110 time=15.2 ms
+        64 bytes from mad07s10-in-f4.1e100.net (172.217.168.164): icmp_seq=10 ttl=110 time=15.8 ms
+        64 bytes from mad07s10-in-f4.1e100.net (172.217.168.164): icmp_seq=11 ttl=110 time=16.0 ms
+        64 bytes from mad07s10-in-f4.1e100.net (172.217.168.164): icmp_seq=12 ttl=110 time=15.7 ms
+        64 bytes from mad07s10-in-f4.1e100.net (172.217.168.164): icmp_seq=13 ttl=110 time=15.8 ms
+        64 bytes from mad07s10-in-f4.1e100.net (172.217.168.164): icmp_seq=14 ttl=110 time=18.5 ms
+        .
+        .
+        .
+> [!NOTE]
+> Todos éstos comando deben ser dentro del contenedor **dam_ubu1**.<br>
+> Para detener el ping a Google **Ctrol+c**.
+
