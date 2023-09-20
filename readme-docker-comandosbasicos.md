@@ -147,3 +147,19 @@ Utilizaremos la imagen de Ubuntu. Usa Visual Studio Code y Docker junto con esta
 > Todos éstos comando deben ser dentro del contenedor **dam_ubu2**.<br>
 > En éste caso si funciona porque se realizaron los comando de instalación en **dam_ubu2**.
 > Para detener el ping **Ctrol+c**.
+
+- [x] Sal del terminal, ¿que ocurrió con el contenedor?
+
+        Comando: exit
+
+> [!NOTE]
+> El contenedor se cierra, pero no se borra, para comprobar que existe será con el siguiente comando:
+
+        Comando: $ docker ps -a
+
+        Salida por consola:
+        CONTAINER ID   IMAGE           COMMAND       CREATED          STATUS                      PORTS     NAMES
+        fb14ccd0adea   ubuntu:latest   "bash"        16 minutes ago   Exited (0) 10 seconds ago             dam_ubu2
+        fa0d9a6d36a6   ubuntu:latest   "/bin/bash"   3 hours ago      Up 2 hours                            dam_ubu1
+        3f2e58a2105b   ubuntu          "bash"        45 hours ago     Exited (137) 22 hours ago             ubi2
+        241540ca4e5f   ubuntu          "bash"        45 hours ago     Exited (137) 18 hours ago             ubi1
