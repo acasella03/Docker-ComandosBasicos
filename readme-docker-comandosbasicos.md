@@ -80,7 +80,7 @@ Utilizaremos la imagen de Ubuntu. Usa Visual Studio Code y Docker junto con esta
         TX packets 0  bytes 0 (0.0 B)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
-        Comando(ping):  apt install iputils -ping
+        Comando(ping):  apt install iputils-ping
                         ping www.google.com
         
         Salida por consola:
@@ -106,3 +106,44 @@ Utilizaremos la imagen de Ubuntu. Usa Visual Studio Code y Docker junto con esta
 > Todos éstos comando deben ser dentro del contenedor **dam_ubu1**.<br>
 > Para detener el ping a Google **Ctrol+c**.
 
+- [x] Crea un contenedor con el nombre 'dam_ubu2'. ¿Puedes hacer ping entre los contenedores?
+
+        Comando: $ docker run --name dam_ubu2 -it ubuntu:latest bash
+
+        Comando(ping): ping 172.17.0.2
+        Salida por consola:
+        bash: ping: command not found
+
+> [!NOTE]
+> Todos éstos comando deben ser dentro del contenedor **dam_ubu2**.<br>
+> En éste caso no funciona porque se debe actualizar e instalar las tools en **dam_ubu2**, ya que donde se hizo fue en el contenedor **dam_ubu1**.
+
+        Comando(ping):  apt update
+                        apt install iputils-ping
+                        ping 172.17.0.2
+
+        Salida por consola:
+        PING 172.17.0.2 (172.17.0.2) 56(84) bytes of data.
+        64 bytes from 172.17.0.2: icmp_seq=1 ttl=64 time=0.219 ms       
+        64 bytes from 172.17.0.2: icmp_seq=2 ttl=64 time=0.114 ms
+        64 bytes from 172.17.0.2: icmp_seq=3 ttl=64 time=0.113 ms
+        64 bytes from 172.17.0.2: icmp_seq=4 ttl=64 time=0.111 ms
+        64 bytes from 172.17.0.2: icmp_seq=5 ttl=64 time=0.118 ms
+        64 bytes from 172.17.0.2: icmp_seq=6 ttl=64 time=0.111 ms
+        64 bytes from 172.17.0.2: icmp_seq=7 ttl=64 time=0.120 ms
+        64 bytes from 172.17.0.2: icmp_seq=8 ttl=64 time=0.119 ms
+        64 bytes from 172.17.0.2: icmp_seq=9 ttl=64 time=0.116 ms
+        64 bytes from 172.17.0.2: icmp_seq=10 ttl=64 time=0.112 ms
+        64 bytes from 172.17.0.2: icmp_seq=11 ttl=64 time=0.042 ms
+        64 bytes from 172.17.0.2: icmp_seq=12 ttl=64 time=0.099 ms
+        64 bytes from 172.17.0.2: icmp_seq=13 ttl=64 time=0.058 ms
+        64 bytes from 172.17.0.2: icmp_seq=14 ttl=64 time=0.061 ms
+        64 bytes from 172.17.0.2: icmp_seq=15 ttl=64 time=0.116 ms
+        64 bytes from 172.17.0.2: icmp_seq=16 ttl=64 time=0.116 ms
+        .
+        .
+        .
+> [!NOTE]
+> Todos éstos comando deben ser dentro del contenedor **dam_ubu2**.<br>
+> En éste caso si funciona porque se realizaron los comando de instalación en **dam_ubu2**.
+> Para detener el ping **Ctrol+c**.
