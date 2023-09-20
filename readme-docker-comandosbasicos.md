@@ -14,7 +14,7 @@ Utilizaremos la imagen de Ubuntu. Usa Visual Studio Code y Docker junto con esta
 8. ¿Cuanta RAM ocupan los contenedores? ¿Hay algún comando docker para saber esto?.
 
 ## Respuesta
-- [x] Descarga la imagen 'ubuntu y comprueba que está en tu equipo 
+1. - [x] Descarga la imagen 'ubuntu y comprueba que está en tu equipo 
 
         Comando:            $ docker run ubuntu
 
@@ -32,7 +32,7 @@ Utilizaremos la imagen de Ubuntu. Usa Visual Studio Code y Docker junto con esta
 > Como se puede observar en la línea 2, se comprueba que existe la imágen.
 
 
-- [x] Crea un contenedor sin ponerle nombre. ¿está arrancado? Obtén el nombre
+2. - [x] Crea un contenedor sin ponerle nombre. ¿está arrancado? Obtén el nombre
 
         Comando:        $ docker run -i -t  ubuntu:latest bash
 
@@ -50,13 +50,13 @@ Utilizaremos la imagen de Ubuntu. Usa Visual Studio Code y Docker junto con esta
 > [!NOTE]
 > Como se puede observar, se comprueba que que el nombre es **flamboyant_napier**.
 
-- [x] Crea un contenedor con el nombre 'dam_ubu1'. ¿Como puedes acceder a él?
+3. - [x] Crea un contenedor con el nombre 'dam_ubu1'. ¿Como puedes acceder a él?
 
         Comando:        $ docker run --name dam_ubu1 -it ubuntu:latest
 
         Para acceder:   $ docker exec -it dam_ubu1 bash
 
-- [x] Comprueba que ip tiene y si puedes hacer un ping a google.com
+4. - [x] Comprueba que ip tiene y si puedes hacer un ping a google.com
 
         Comando:        apt update
                         apt install net-tools
@@ -106,7 +106,7 @@ Utilizaremos la imagen de Ubuntu. Usa Visual Studio Code y Docker junto con esta
 > Todos éstos comando deben ser dentro del contenedor **dam_ubu1**.<br>
 > Para detener el ping a Google **Ctrol+c**.
 
-- [x] Crea un contenedor con el nombre 'dam_ubu2'. ¿Puedes hacer ping entre los contenedores?
+5. - [x] Crea un contenedor con el nombre 'dam_ubu2'. ¿Puedes hacer ping entre los contenedores?
 
         Comando: $ docker run --name dam_ubu2 -it ubuntu:latest bash
 
@@ -148,7 +148,7 @@ Utilizaremos la imagen de Ubuntu. Usa Visual Studio Code y Docker junto con esta
 > En éste caso si funciona porque se realizaron los comando de instalación en **dam_ubu2**.
 > Para detener el ping **Ctrol+c**.
 
-- [x] Sal del terminal, ¿que ocurrió con el contenedor?
+6. - [x] Sal del terminal, ¿que ocurrió con el contenedor?
 
         Comando: exit
 
