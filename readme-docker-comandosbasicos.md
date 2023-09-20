@@ -49,3 +49,11 @@ Utilizaremos la imagen de Ubuntu. Usa Visual Studio Code y Docker junto con esta
 
 > [!NOTE]
 > Como se puede observar, se comprueba que que el nombre es **flamboyant_napier**.
+
+- [x] Crea un contenedor con el nombre 'dam_ubu1'. ¿Como puedes acceder a él?
+
+        Comando:        $ docker run --name dam_ubu1 -it ubuntu:latest
+
+        Para acceder:   $ docker exec -it dam_ubu1 bash
+
+
