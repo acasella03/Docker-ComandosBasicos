@@ -163,3 +163,18 @@ Utilizaremos la imagen de Ubuntu. Usa Visual Studio Code y Docker junto con esta
         fa0d9a6d36a6   ubuntu:latest   "/bin/bash"   3 hours ago      Up 2 hours                            dam_ubu1
         3f2e58a2105b   ubuntu          "bash"        45 hours ago     Exited (137) 22 hours ago             ubi2
         241540ca4e5f   ubuntu          "bash"        45 hours ago     Exited (137) 18 hours ago             ubi1
+
+7. - [x] ¿Cuanta memoria en el disco duro ocupaste?
+        
+         Comando: $ docker system df
+
+         Salida por consola:
+         TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+         Images          4         1         194.7MB   116.8MB (60%)
+         Containers      4         0         182.9MB   182.9MB (100%)
+         Local Volumes   0         0         0B        0B
+         Build Cache     0         0         0B        0B
+
+
+
+8. - [x] ¿Cuanta RAM ocupan los contenedores? ¿Hay algún comando docker para saber esto?
