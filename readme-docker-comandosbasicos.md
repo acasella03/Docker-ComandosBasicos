@@ -178,3 +178,22 @@ Utilizaremos la imagen de Ubuntu. Usa Visual Studio Code y Docker junto con esta
 
 
 8. - [x] ¿Cuanta RAM ocupan los contenedores? ¿Hay algún comando docker para saber esto?
+
+         Primero:
+         $ docker start dam_ubu1
+         $ docker exec -it dam_ubu1 bash
+         exit
+         $ docker start dam_ubu2
+         $ docker exec -it dam_ubu2 bash
+         exit
+         
+         Luego:
+         Comando: $ docker stats
+
+         Salida por consola:
+         CONTAINER ID   NAME       CPU %     MEM USAGE / LIMIT     MEM %     NET I/O       BLOCK I/O     PIDS
+         fb14ccd0adea   dam_ubu2   0.00%     896KiB / 15.39GiB     0.01%     6.17kB / 0B   4.1kB / 0B    1
+         fa0d9a6d36a6   dam_ubu1   0.00%     5.113MiB / 15.39GiB   0.03%     16.5kB / 0B   4.89MB / 0B   1
+
+> [!NOTE]
+> Como se puede observar, una vez iniciado el contenedor y cerrado el bash se puede obtener la información solicitada.
